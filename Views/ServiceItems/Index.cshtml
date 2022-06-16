@@ -1,0 +1,22 @@
+﻿@model IEnumerable<VIATECH.Domain.Entities.ServiceItem>
+
+
+@foreach (var item in Model) 
+{
+<div class="col-4 col-12-narrower">
+	<div class="col-4 col-12-narrower">
+	<section id="sidebar">
+		<section>
+			<a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">
+			 </a>
+			 <a href="#" class="image featured"><img src="~/images/@item.TitleImagePath" alt="" class="image-wrapper first" /></a>
+			 
+			<header>
+				<h3>@item.Title</h3>
+			</header>
+			<p>@item.Subtitle</p>
+		</section>
+	</section>
+	</div>	
+</div>
+}

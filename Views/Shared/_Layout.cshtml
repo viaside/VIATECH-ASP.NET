@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.ViewEngines
+@inject ICompositeViewEngine Engine
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    @await Html.PartialAsync("MetatagPartial")
+		@await Html.PartialAsync("CssPartial")
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+			@await Html.PartialAsync("HeaderPartial")
+			<div class="wrapper">
+				<div class="container" id="main">
+					<div class="row gtr-150">
+						@RenderBody()
+						<div class="col-8 col-12-narrower"></div>
+						<div class="col-4 col-12-narrower"></div>
+					</div>
+					@await Html.PartialAsync("SlidebarPartial")
+				</div>
+			</div>
+			@await Html.PartialAsync("FooterPartial")
+		</div>
+		@await Html.PartialAsync("ScriptsPartial")
+	</body>
+</html>

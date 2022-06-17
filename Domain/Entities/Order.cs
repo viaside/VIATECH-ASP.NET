@@ -6,14 +6,13 @@ namespace VIATECH.Models
     {
         public virtual Guid id { get; set; }
 
-        [Required]
-        public string? Id { get; set; }
+        [Display(Name = "Имя")]
+        public virtual string? Name { get; set; }
 
-        public string? Name { get; set; }
+        [Display(Name = "Почта")]
+        public virtual string? Email { get; set; }
 
-        public string? Email { get; set; }
-
-        public string? Message { get; set; }
-
+        [Display(Name = "Сообщения")]
+        public virtual string? Message { get; set; }
     }
 }

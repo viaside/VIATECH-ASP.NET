@@ -12,7 +12,6 @@ namespace VIATECH.Domain
 
         public DbSet<TextField>? TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
-        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\sass\main.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\ViewComponents\" />
   </ItemGroup>
 

@@ -1,19 +1,19 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace VIATECH.Models
+namespace VIATECH.Domain.Entities
 {
-    public abstract class Order
+    public class Order
     {
-        public virtual Guid id { get; set; }
+        public Guid id { get; set; }
 
         [Display(Name = "Имя")]
-        public virtual string? Name { get; set; }
+        public string? Name { get; set; }
 
         [Display(Name = "Почта")]
-        public virtual string? Email { get; set; }
+        public string? Email { get; set; }
 
         [Display(Name = "Сообщения")]
-        public virtual string? Message { get; set; }
+        public string? Message { get; set; }
     }
 }

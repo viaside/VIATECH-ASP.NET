@@ -12,8 +12,7 @@ namespace VIATECH.Domain
 
         public DbSet<TextField>? TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
-        /*public DbSet<serviceite>*/
-        
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

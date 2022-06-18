@@ -84,7 +84,7 @@ html {
 }
 
 body {
-  background: #f5f7fa;
+  background: #cccccc5c;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #52575c;
@@ -1695,7 +1695,7 @@ button:hover,
   position: relative;
   border-top: solid 1px #c2c7cc;
   padding: 6em 0 6em 0;
-  background-image: url("images/overlay.png"), url("images/footer.svg");
+  background-image: url("images/pic01.jpg"), url("images/pic01.jpg");
   background-size: 128px 128px, 100% 100%;
 }
 

@@ -17,7 +17,7 @@ namespace VIATECH.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.5")
+                .HasAnnotation("ProductVersion", "6.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -51,7 +51,7 @@ namespace VIATECH.Migrations
                         new
                         {
                             Id = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
-                            ConcurrencyStamp = "1a042317-688f-4d4a-8a56-e5daec033475",
+                            ConcurrencyStamp = "a5fc7103-6343-442f-ac6d-2caf8f2a9d89",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -150,13 +150,13 @@ namespace VIATECH.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a9c45ea6-82a7-4053-9bd1-5853bda1673d",
+                            ConcurrencyStamp = "ae98c7e6-47d8-4b30-8eb1-e20ad205516f",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEB+1Y+293rSdggJwQILeBk7G2UntfEEQdqwvWFuQks7js2RglWPlvxj8NOD1n3rqcA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEB3MW+djFuwa4YK60KBfg15WSYTHvABFSXGL1Ig+znYcfuQ5ju70cnT5afhi2htkNA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -252,6 +252,26 @@ namespace VIATECH.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("VIATECH.Domain.Entities.Order", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("VIATECH.Domain.Entities.ServiceItem", b =>
                 {
                     b.Property<Guid?>("Id")
@@ -262,11 +282,9 @@ namespace VIATECH.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Subtitle")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Text")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")

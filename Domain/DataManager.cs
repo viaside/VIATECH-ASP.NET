@@ -6,11 +6,13 @@ namespace VIATECH.Domain
     {
         public ITextFieldsRepository? TextFields { get; set; }
         public IServiceItemsRepository? ServiceItems { get; set; }
+        public IOrderRepository? Orders { get; set; }
 
-        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository)
+        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository, IOrderRepository orderRepository)
         {
             TextFields = textFieldsRepository;
             ServiceItems = serviceItemsRepository;
+            Orders = orderRepository;
         }
     }
 }

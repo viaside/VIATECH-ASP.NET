@@ -30,6 +30,7 @@ namespace VIATECH
             builder.Services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
             builder.Services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
             builder.Services.AddTransient<IServiceItemsRepository, EFServiceItemsRepository>();
+            builder.Services.AddTransient<IOrderRepository, EFOrderRepository>();
             builder.Services.AddTransient<DataManager>();
 
             //подключаем контекст БД

@@ -7,6 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using VIATECH.Domain;
 using VIATECH.Domain.Entities;
+using System;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using VIATECH.Domain;
+using VIATECH.Domain.Entities;
+using VIATECH.Service;
 
 namespace VIATECH.Controllers
 {
@@ -14,7 +22,7 @@ namespace VIATECH.Controllers
     {
         private readonly AppDbContext _context;
 
-        public ServiceItemsController(AppDbContext context)
+        public ServiceItemsController(AppDbContext context, DataManager dataManager)
         {
             _context = context;
         }
@@ -34,3 +42,4 @@ namespace VIATECH.Controllers
         }
     }
 }
+
